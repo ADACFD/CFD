@@ -1,0 +1,92 @@
+\hypertarget{read__fluent__mesh_8cpp}{}\subsection{read\+\_\+fluent\+\_\+mesh.\+cpp File Reference}
+\label{read__fluent__mesh_8cpp}\index{read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcell}{cell}
+\item 
+struct \hyperlink{structface}{face}
+\item 
+struct \hyperlink{structnode}{node}
+\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structcell}{cell} \hyperlink{read__fluent__mesh_8cpp_ad8a16a9022d96f964fca68b495a55125}{C\+E\+LL}
+\item 
+typedef struct \hyperlink{structface}{face} \hyperlink{read__fluent__mesh_8cpp_a11f48cd98064a5c416b2033785898f74}{F\+A\+CE}
+\item 
+typedef struct \hyperlink{structnode}{node} \hyperlink{read__fluent__mesh_8cpp_adcce2ad1d5c8ca216a02505517168316}{N\+O\+DE}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{read__fluent__mesh_8cpp_ac43069ce9b138d54e0fb4c1984ad27b9}{read\+Dimension} (ifstream \&)
+\item 
+void \hyperlink{read__fluent__mesh_8cpp_a88b17b0fc2864e4e293fb631a527ad27}{read\+Nodes} (ifstream \&, \hyperlink{read__fluent__mesh_8cpp_adcce2ad1d5c8ca216a02505517168316}{N\+O\+DE} $\ast$nodes, long int num\+Nodes)
+\item 
+void \hyperlink{read__fluent__mesh_8cpp_ad6f810df6f2f16b3befdd42588b3786a}{read\+Faces} (ifstream \&, \hyperlink{read__fluent__mesh_8cpp_a11f48cd98064a5c416b2033785898f74}{F\+A\+CE} $\ast$faces, long int facel1, long int facel2)
+\item 
+void \hyperlink{read__fluent__mesh_8cpp_ab6581e2acc9341d70e2575aafa410b9c}{read\+Cells} (ifstream \&, \hyperlink{read__fluent__mesh_8cpp_ad8a16a9022d96f964fca68b495a55125}{C\+E\+LL} $\ast$cells, long int num\+Cells)
+\item 
+int \hyperlink{read__fluent__mesh_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Typedef Documentation}
+\mbox{\Hypertarget{read__fluent__mesh_8cpp_ad8a16a9022d96f964fca68b495a55125}\label{read__fluent__mesh_8cpp_ad8a16a9022d96f964fca68b495a55125}} 
+\index{read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}!C\+E\+LL@{C\+E\+LL}}
+\index{C\+E\+LL@{C\+E\+LL}!read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}}
+\paragraph{\texorpdfstring{C\+E\+LL}{CELL}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structcell}{cell} \hyperlink{read__fluent__mesh_8cpp_ad8a16a9022d96f964fca68b495a55125}{C\+E\+LL}}
+
+\mbox{\Hypertarget{read__fluent__mesh_8cpp_a11f48cd98064a5c416b2033785898f74}\label{read__fluent__mesh_8cpp_a11f48cd98064a5c416b2033785898f74}} 
+\index{read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}!F\+A\+CE@{F\+A\+CE}}
+\index{F\+A\+CE@{F\+A\+CE}!read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}}
+\paragraph{\texorpdfstring{F\+A\+CE}{FACE}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structface}{face} \hyperlink{read__fluent__mesh_8cpp_a11f48cd98064a5c416b2033785898f74}{F\+A\+CE}}
+
+\mbox{\Hypertarget{read__fluent__mesh_8cpp_adcce2ad1d5c8ca216a02505517168316}\label{read__fluent__mesh_8cpp_adcce2ad1d5c8ca216a02505517168316}} 
+\index{read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}!N\+O\+DE@{N\+O\+DE}}
+\index{N\+O\+DE@{N\+O\+DE}!read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}}
+\paragraph{\texorpdfstring{N\+O\+DE}{NODE}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structnode}{node} \hyperlink{read__fluent__mesh_8cpp_adcce2ad1d5c8ca216a02505517168316}{N\+O\+DE}}
+
+
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{read__fluent__mesh_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{read__fluent__mesh_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}!main@{main}}
+\index{main@{main}!read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}}
+\paragraph{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{read__fluent__mesh_8cpp_ab6581e2acc9341d70e2575aafa410b9c}\label{read__fluent__mesh_8cpp_ab6581e2acc9341d70e2575aafa410b9c}} 
+\index{read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}!read\+Cells@{read\+Cells}}
+\index{read\+Cells@{read\+Cells}!read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}}
+\paragraph{\texorpdfstring{read\+Cells()}{readCells()}}
+{\footnotesize\ttfamily void read\+Cells (\begin{DoxyParamCaption}\item[{ifstream \&}]{mesh\+File,  }\item[{\hyperlink{read__fluent__mesh_8cpp_ad8a16a9022d96f964fca68b495a55125}{C\+E\+LL} $\ast$}]{cells,  }\item[{long int}]{num\+Cells }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{read__fluent__mesh_8cpp_ac43069ce9b138d54e0fb4c1984ad27b9}\label{read__fluent__mesh_8cpp_ac43069ce9b138d54e0fb4c1984ad27b9}} 
+\index{read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}!read\+Dimension@{read\+Dimension}}
+\index{read\+Dimension@{read\+Dimension}!read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}}
+\paragraph{\texorpdfstring{read\+Dimension()}{readDimension()}}
+{\footnotesize\ttfamily int read\+Dimension (\begin{DoxyParamCaption}\item[{ifstream \&}]{mesh\+File }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{read__fluent__mesh_8cpp_ad6f810df6f2f16b3befdd42588b3786a}\label{read__fluent__mesh_8cpp_ad6f810df6f2f16b3befdd42588b3786a}} 
+\index{read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}!read\+Faces@{read\+Faces}}
+\index{read\+Faces@{read\+Faces}!read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}}
+\paragraph{\texorpdfstring{read\+Faces()}{readFaces()}}
+{\footnotesize\ttfamily void read\+Faces (\begin{DoxyParamCaption}\item[{ifstream \&}]{mesh\+File,  }\item[{\hyperlink{read__fluent__mesh_8cpp_a11f48cd98064a5c416b2033785898f74}{F\+A\+CE} $\ast$}]{faces,  }\item[{long int}]{facel1,  }\item[{long int}]{facel2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{read__fluent__mesh_8cpp_a88b17b0fc2864e4e293fb631a527ad27}\label{read__fluent__mesh_8cpp_a88b17b0fc2864e4e293fb631a527ad27}} 
+\index{read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}!read\+Nodes@{read\+Nodes}}
+\index{read\+Nodes@{read\+Nodes}!read\+\_\+fluent\+\_\+mesh.\+cpp@{read\+\_\+fluent\+\_\+mesh.\+cpp}}
+\paragraph{\texorpdfstring{read\+Nodes()}{readNodes()}}
+{\footnotesize\ttfamily void read\+Nodes (\begin{DoxyParamCaption}\item[{ifstream \&}]{mesh\+File,  }\item[{\hyperlink{read__fluent__mesh_8cpp_adcce2ad1d5c8ca216a02505517168316}{N\+O\+DE} $\ast$}]{nodes,  }\item[{long int}]{num\+Nodes }\end{DoxyParamCaption})}
+
