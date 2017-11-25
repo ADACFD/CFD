@@ -21,6 +21,7 @@ public:
     ~FACE() {}
     int Cell_Left, Cell_Right;
     int Vertex[4];
+    int Type;
 };
 
 class BC {
@@ -43,7 +44,7 @@ int main()
     string line;
     int nDimensions, nZones, nBoundaryPatches;
     int nVertices, nFaces, nCells, nVerticesPerFaceMax, nFacesPerCellMax;
-    int nFacesPerCell, nNodesPerFace;
+    int nFacesPerCell;
     int checkint=0, bc_count=0;
     string mesh_file_name, bc_file_name;
     vector<string> line_vector;
@@ -86,14 +87,15 @@ int main()
     faces = new FACE[nFaces];
     for (int i=0 ; i < nFaces ; i++)
     {
-        meshFile >> nNodesPerFace;
-        if nNodesPerFace==3
+        meshFile >> faces[i].type;
+        if faces[i].type==3
             nTri+=1;
-        else if nNodesPerFace==4
+        else if faces[i].type==4
             nQuad+=1;
         else
             cout << "New Face types found --> Faces have to be either Triangular/Quadrilateral";
-        for(int j=0 ; j< nFacesPerCell ; j++)
+        
+        for(int j=0 ; j< faces[i].type ; j++)
         {
             meshFile >> faces[i].Vertex[j];
         }
