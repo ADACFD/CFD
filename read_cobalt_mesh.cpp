@@ -47,6 +47,7 @@ int main()
     int checkint=0, bc_count=0;
     string mesh_file_name, bc_file_name;
     vector<string> line_vector;
+    int nQuad, nTri;
 
     mesh_file_name = "cobalt";
     bc_file_name = "cobalt.bc";
@@ -100,6 +101,8 @@ int main()
         perror(("error while reading file " + mesh_file_name).c_str());
 
     meshFile.close();
+    
+    
 
     meshBcFile.open(bc_file_name, ios::in);
 
