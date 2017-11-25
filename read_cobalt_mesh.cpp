@@ -43,11 +43,11 @@ int main()
     string line;
     int nDimensions, nZones, nBoundaryPatches;
     int nVertices, nFaces, nCells, nVerticesPerFaceMax, nFacesPerCellMax;
-    int nFacesPerCell;
+    int nFacesPerCell, nNodesPerFace;
     int checkint=0, bc_count=0;
     string mesh_file_name, bc_file_name;
     vector<string> line_vector;
-    int nQuad, nTri;
+    int nQuad=0, nTri=0;
 
     mesh_file_name = "cobalt";
     bc_file_name = "cobalt.bc";
@@ -86,7 +86,13 @@ int main()
     faces = new FACE[nFaces];
     for (int i=0 ; i < nFaces ; i++)
     {
-        meshFile >> nFacesPerCell;
+        meshFile >> nNodesPerFace;
+        if nNodesPerFace==3
+            nTri+=1;
+        else if nNodesPerFace==4
+            nQuad+=1;
+        else
+            cout << "New Face types found --> Faces have to be either Triangular/Quadrilateral";
         for(int j=0 ; j< nFacesPerCell ; j++)
         {
             meshFile >> faces[i].Vertex[j];
