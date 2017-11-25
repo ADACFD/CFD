@@ -110,7 +110,6 @@ int main()
 
     meshFile.close();
     
-    
 
     meshBcFile.open(bc_file_name, ios::in);
 
